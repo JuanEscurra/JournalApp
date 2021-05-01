@@ -1,0 +1,71 @@
+.siderbar {
+    width: 25%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: $maximun-blue;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    width: 80%;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba($celadon-blue, 0.5);
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.6s;
+
+    &:hover {
+        background-color: rgba($celadon-blue, 1);
+    }
+
+    &__title {
+        text-transform: uppercase;
+        padding: 5px 0;
+        border-bottom: 3px solid $maximun-blue;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-size: 12px;
+    }
+
+    &__btn {
+        margin: 10px 0;
+        padding: 5px 0;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: padding 0.3s;
+        
+        &:hover {
+            padding: 7px 0;
+        }
+        
+        &--primary {
+            background-color: #0b5ed7;
+            &:hover {
+                background-color: #0a58ca;
+            }
+        }
+
+        &--delete {
+            background-color: #dc3545;
+            &:hover {
+                background-color: #bb2d3b;
+            }
+        }
+    }
+    
+    & > * {
+        display: block;
+        width: 100%;
+    }
+}

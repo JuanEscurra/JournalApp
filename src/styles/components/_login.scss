@@ -1,0 +1,19 @@
+.login {
+    width: 25vw;
+    padding: 30px;
+    background-color: $celadon-blue;
+    border-radius: 10px;
+    .login__label {
+        width:100%,
+
+    }
+    
+    .login__input {
+        width:100%;
+        height:20px;
+    }
+
+    .login__button {
+        width: 100%
+    }
+}
