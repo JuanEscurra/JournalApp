@@ -35,7 +35,7 @@ export const TodoAdd = () => {
     return (
         <div className="todo-add">
             <h3 className="todo-add__title">Add a task</h3>
-            <form onSubmit={handleAddShipped} className="todo-add___form">
+            <form onSubmit={handleAddShipped} className="todo-add___login">
                 <div className="todo-add__field">
                     <label>Name:</label>
                     <input

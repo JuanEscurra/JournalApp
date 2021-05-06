@@ -8,11 +8,6 @@ $oscuro: #1C2833;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     box-sizing: border-box;
-    // color: white;
-}
-
-html, body {
-    // width: 100vw;
 }
 
 .container {
@@ -23,4 +18,64 @@ html, body {
     width: 100%;
 }
 
+.link {
+    text-decoration: none;
+    color: $light-blue;
+    transition: all 0.5s;
+    font-size: 12px;
+    display: block;
+    width: 80%;
+    margin: 0 auto 0 0;
+    &:hover {
+        color: goldenrod;
+        border-bottom: goldenrod solid 1.5px;
+    }
+}
 
+@mixin flex-center($gap : 0) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin btn($width,$height,$margin-y) {
+    width: $width;
+    height: $height;
+    border-radius: 15px;
+    border: none;
+    margin: $margin-y auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+        transform:scale(1.05);
+    }
+}
+
+@mixin input($width,$height,$color) {
+    width: $width;
+    height: $height;
+    color: $color;
+    background: none;
+    border: none;
+    transition: all 0.5s;
+    &:focus {
+        outline: none;
+        transform: scale(1.05);
+    }
+}
+
+@mixin spin {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid $light-blue;
+    border-top: 5px solid #3498db;
+    animation: spin 2s linear infinite;
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
